@@ -7,7 +7,7 @@ imageio==2.9.0
 joblib==1.0.1
 kiwisolver==1.3.1
 matplotlib==3.4.3
-mxnet-cu100==1.8.0.post0
+mxnet-cu114
 networkx==2.6.2
 numpy==1.21.1
 opencv-python==4.5.3.56
@@ -23,3 +23,7 @@ six==1.16.0
 threadpoolctl==2.2.0
 tifffile==2021.8.8
 urllib3==1.26.6
+
+
+# Doc install cpu
+# https://mxnet.apache.org/versions/1.1.0/install/index.html?platform=Linux&language=Python&processor=CPU
