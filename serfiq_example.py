@@ -48,7 +48,10 @@ if __name__ == "__main__":
     image_files = open_dataset(dataset_path)
 
     for image_path in tqdm(image_files, desc="Processing images", unit="image"):
-        test_img2 = cv2.imread(image_path)
-        aligned_img2 = ser_fiq.apply_mtcnn(test_img2)
-        score = ser_fiq.get_score(aligned_img2, T=100)
-        print(os.path.basename(image_path), "===>", score)
+        img = cv2.imread(image_path)
+        aligned_img = ser_fiq.apply_mtcnn(img)
+        if aligned_img is not None:
+            score = ser_fiq.get_score(aligned_img, T=100)
+            print(score, " ====> ", os.path.basename(image_path))
+        else:
+            print("Noface ====>" , os.path.basename(image_path))
