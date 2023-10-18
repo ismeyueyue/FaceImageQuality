@@ -1,2 +1,4 @@
 insightface/model/*
 testImages/
+__pycache__
+.ipynb_checkpoints/
